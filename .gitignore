@@ -2,14 +2,14 @@
 __pycache__/
 *.py[cod]
 
-# Virtual env
+# Virtual envs
 venv/
 .env
 
-# Poetry
+# Poetry lock
 poetry.lock
 
-# PyInstaller
-dist/
+# Build artifacts
 build/
-*.spec
+dist/
+*.egg-info/
