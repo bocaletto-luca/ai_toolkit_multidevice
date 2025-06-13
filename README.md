@@ -1,5 +1,6 @@
 <!-- README.md -->
 # AI Toolkit
+#### Author: Bocaletto Luca
 
 Local, zero-registration AI CLI: text summarization, Q&A, audio transcription and image captioning.  
 Self-updates via `ai_toolkit update`.
