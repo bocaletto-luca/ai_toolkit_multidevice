@@ -1,0 +1,15 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual env
+venv/
+.env
+
+# Poetry
+poetry.lock
+
+# PyInstaller
+dist/
+build/
+*.spec
