@@ -15,6 +15,7 @@ sentencepiece = "*"
 whisper       = "*"
 Pillow        = "*"
 requests      = "*"
+PySimpleGUI   = "*"
 
 [tool.poetry.scripts]
 ai_toolkit = "app:main"
