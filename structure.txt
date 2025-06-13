@@ -1,0 +1,11 @@
+ai_toolkit/
+├── .gitignore
+├── LICENSE
+├── pyproject.toml
+├── README.md
+├── app.py
+└── tasks/
+    ├── summarizer.py
+    ├── qa.py
+    ├── transcription.py
+    └── image_caption.py
