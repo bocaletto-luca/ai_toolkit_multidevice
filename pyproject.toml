@@ -1,4 +1,5 @@
 # pyproject.toml
+
 [tool.poetry]
 name         = "ai_toolkit"
 version      = "1.0.0"
