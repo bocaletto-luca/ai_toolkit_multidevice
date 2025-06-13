@@ -1,8 +1,5 @@
 # app.py
-import argparse
-import subprocess
-import sys
-import requests
+import argparse, subprocess, sys, requests
 
 __version__ = "1.0.0"
 
@@ -17,35 +14,33 @@ def self_update():
     if latest != __version__:
         print(f"Updating ai_toolkit: {__version__} → {latest}")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "ai_toolkit"])
-        print("Aggiornato. Rilancia il comando.")
+        print("Updated. Rerun your command.")
         sys.exit(0)
-    print("Sei già alla versione più recente.")
+    print("Already up-to-date.")
 
 def main():
-    parser = argparse.ArgumentParser(prog="ai_toolkit", description="Local AI Toolkit")
-    sub = parser.add_subparsers(dest="cmd", required=True)
+    p = argparse.ArgumentParser(prog="ai_toolkit", description="Local AI Toolkit")
+    sub = p.add_subparsers(dest="cmd", required=True)
 
+    sub.add_parser("gui", help="Launch GUI")
     sub.add_parser("update", help="Self-update via PyPI")
-    s = sub.add_parser("summarize", help="Summarize text")
-    s.add_argument("file", help="Path to text file")
-    q = sub.add_parser("qa", help="Question-answering")
-    q.add_argument("question", help="Question to ask")
-    q.add_argument("file", help="Context text file")
-    t = sub.add_parser("transcribe", help="Transcribe audio")
-    t.add_argument("audio", help="Path to audio file")
-    c = sub.add_parser("caption", help="Caption image")
-    c.add_argument("image", help="Path to image file")
 
-    args = parser.parse_args()
+    s = sub.add_parser("summarize");    s.add_argument("file")
+    q = sub.add_parser("qa");           q.add_argument("question"); q.add_argument("file")
+    t = sub.add_parser("transcribe");   t.add_argument("audio")
+    c = sub.add_parser("caption");      c.add_argument("image")
 
-    if args.cmd == "update":
+    args = p.parse_args()
+
+    if args.cmd == "gui":
+        from gui import run_gui
+        run_gui()
+    elif args.cmd == "update":
         self_update()
     elif args.cmd == "summarize":
-        text = open(args.file, encoding="utf-8").read()
-        print(summarize(text))
+        print(summarize(open(args.file, encoding='utf-8').read()))
     elif args.cmd == "qa":
-        context = open(args.file, encoding="utf-8").read()
-        print(answer(args.question, context))
+        print(answer(args.question, open(args.file, encoding='utf-8').read()))
     elif args.cmd == "transcribe":
         print(transcribe(args.audio))
     elif args.cmd == "caption":
