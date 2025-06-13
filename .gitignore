@@ -1,15 +1,9 @@
-# Byte-compiled / cache
+# .gitignore
 __pycache__/
 *.py[cod]
-
-# Virtual envs
 venv/
 .env
-
-# Poetry lock
 poetry.lock
-
-# Build artifacts
 build/
 dist/
 *.egg-info/
