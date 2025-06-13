@@ -2,24 +2,23 @@
 [tool.poetry]
 name         = "ai_toolkit"
 version      = "1.0.0"
-description  = "Local AI toolkit: summarization, QA, transcription, image captioning; auto-updating via PyPI."
+description  = "Offline AI toolkit: summarization, QA, transcription & image captioning."
 authors      = ["Your Name <you@example.com>"]
 license      = "MIT"
 readme       = "README.md"
-packages     = [{ include = "tasks" }]
 
 [tool.poetry.dependencies]
-python             = "^3.7"
-transformers       = "*"
-torch              = "*"
-sentencepiece      = "*"
-whisper            = "*"
-Pillow             = "*"
-requests           = "*"
+python        = "^3.7"
+transformers  = "*"
+torch         = "*"
+sentencepiece = "*"
+whisper       = "*"
+Pillow        = "*"
+requests      = "*"
 
 [tool.poetry.scripts]
 ai_toolkit = "app:main"
 
 [build-system]
-requires = ["poetry-core"]
+requires    = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
