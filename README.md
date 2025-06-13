@@ -9,9 +9,12 @@ Self-updates via `ai_toolkit update`.
 
 ## 🚀 Install
 
-```bash
 # via pip
-pip install --user ai_toolkit
+    pip install --user ai_toolkit
 
 # or via pipx (isolated)
-pip install --user pipx && pipx install ai_toolkit
+    pip install --user pipx && pipx install ai_toolkit
+
+pip install ai_toolkit
+      
+    ai_toolkit gui
