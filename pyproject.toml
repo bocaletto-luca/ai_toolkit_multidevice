@@ -1,0 +1,25 @@
+# pyproject.toml
+[tool.poetry]
+name         = "ai_toolkit"
+version      = "1.0.0"
+description  = "Local AI toolkit: summarization, QA, transcription, image captioning; auto-updating via PyPI."
+authors      = ["Your Name <you@example.com>"]
+license      = "MIT"
+readme       = "README.md"
+packages     = [{ include = "tasks" }]
+
+[tool.poetry.dependencies]
+python             = "^3.7"
+transformers       = "*"
+torch              = "*"
+sentencepiece      = "*"
+whisper            = "*"
+Pillow             = "*"
+requests           = "*"
+
+[tool.poetry.scripts]
+ai_toolkit = "app:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
