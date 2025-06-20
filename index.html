@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Toolkit – Local Zero-Registration AI CLI</title>
+  <meta name="description" content="AI Toolkit is a zero-registration, local Python CLI for text summarization, Q&amp;A, audio transcription and image captioning.">
+  <meta name="keywords" content="AI CLI, text summarization, Q&A, audio transcription, image captioning, Python, zero registration">
+  <meta name="author" content="Bocaletto Luca">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://github.com/bocaletto-luca/ai_toolkit_multidevice">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AI Toolkit – Local Zero-Registration AI CLI">
+  <meta property="og:description" content="Run AI tasks locally from your terminal: summarize text, ask questions, transcribe audio, caption images.">
+  <meta property="og:url" content="https://github.com/bocaletto-luca/ai_toolkit_multidevice">
+  <meta property="og:site_name" content="AI Toolkit">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Toolkit – Local Zero-Registration AI CLI">
+  <meta name="twitter:description" content="Text summarization, Q&A, audio transcription & image captioning from your terminal.">
+
+  <!-- GitHub Markdown CSS for styling -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css"
+        integrity="sha512-1tV2HpYPXDWZ2U8dGBwS3OWg0doP+2hT0f5Sm5aUnRpxYgiK7g+K1/L0N0o+7vL8VtPrTzZgr9wKbI6mJRwrDw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      margin: 0 auto;
+      padding: 2rem;
+      max-width: 800px;
+      background: #f6f8fa;
+      color: #24292e;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+    }
+    img.badge {
+      vertical-align: middle;
+      margin: 0 .3rem;
+    }
+    pre, code {
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+    pre {
+      padding: 1rem;
+      overflow-x: auto;
+    }
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e1e4e8;
+      text-align: center;
+      font-size: .9rem;
+    }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body class="markdown-body">
+  <h1>AI Toolkit</h1>
+  <p><em>Local, zero-registration AI CLI: text summarization, Q&amp;A, audio transcription and image captioning.</em></p>
+
+  <p align="center">
+    <a href="https://pypi.org/project/ai_toolkit">
+      <img class="badge" src="https://img.shields.io/pypi/v/ai_toolkit.svg" alt="PyPI version">
+    </a>
+    <a href="LICENSE">
+      <img class="badge" src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License">
+    </a>
+  </p>
+
+  <hr />
+
+  <h2>🚀 Installation</h2>
+  <p>Install via <code>pip</code> or <code>pipx</code>:</p>
+  <pre><code class="language-bash"># with pip (per‐user)
+pip install --user ai_toolkit
+
+# or with pipx (isolated environment)
+pip install --user pipx
+pipx install ai_toolkit
+</code></pre>
+
+  <h2>⚙️ Requirements</h2>
+  <ul>
+    <li>Python 3.7 or newer</li>
+    <li>No registration or external API keys</li>
+    <li>Local model files are downloaded on first run</li>
+  </ul>
+
+  <h2>🛠️ Usage</h2>
+  <p>Run in your terminal:</p>
+  <pre><code class="language-bash">ai_toolkit [COMMAND] [OPTIONS]</code></pre>
+
+  <h3>Available Commands</h3>
+  <ul>
+    <li><code>summarize &lt;file_or_text&gt;</code> — Generate a concise summary of input text or file.</li>
+    <li><code>ask &lt;question&gt; --context &lt;file&gt;</code> — Ask a question using a document as context.</li>
+    <li><code>transcribe &lt;audio_file&gt;</code> — Transcribe speech from audio (WAV/MP3) to text.</li>
+    <li><code>caption &lt;image_file&gt;</code> — Produce a caption describing the contents of an image.</li>
+    <li><code>gui</code> — Launch a simple local web interface.</li>
+    <li><code>update</code> — Self-update the CLI and models to the latest version.</li>
+    <li><code>--help</code> &amp; <code>--version</code> — Show help or version info.</li>
+  </ul>
+
+  <h2>🔧 Examples</h2>
+  <h4>Text summarization</h4>
+  <pre><code class="language-bash">ai_toolkit summarize "Long article text goes here..."</code></pre>
+
+  <h4>Contextual Q&amp;A</h4>
+  <pre><code class="language-bash">ai_toolkit ask "What is AI Toolkit?" --context README.md</code></pre>
+
+  <h4>Audio transcription</h4>
+  <pre><code class="language-bash">ai_toolkit transcribe interview.wav</code></pre>
+
+  <h4>Image captioning</h4>
+  <pre><code class="language-bash">ai_toolkit caption photo.jpg</code></pre>
+
+  <h2>📝 Self-Update</h2>
+  <p>Keep your CLI and models fresh:</p>
+  <pre><code class="language-bash">ai_toolkit update</code></pre>
+
+  <h2>👤 Author &amp; Links</h2>
+  <p>Created by <strong>Bocaletto Luca</strong>. View the full source on GitHub:</p>
+  <p><a href="https://github.com/bocaletto-luca/ai_toolkit_multidevice">https://github.com/bocaletto-luca/ai_toolkit_multidevice</a></p>
+
+  <footer>
+    <p>© 2025 Bocaletto Luca</p>
+    <p>
+      <a href="https://bocaletto-luca.github.io">bocaletto-luca.github.io</a> |
+      <a href="https://bocalettoluca.altervista.org">bocalettoluca.altervista.org</a>
+    </p>
+  </footer>
+</body>
+</html>
+```
